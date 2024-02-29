@@ -1,0 +1,5 @@
+A manager (is a) type of employee. (Employee is a parent of Manager) => Inheritence
+Manager (has a) swipe card to enter company premises. => Association
+He (has many) workers under him. => Aggregation
+His salary depends on project success. => Composition
+Project success depends on a manager => Composition
