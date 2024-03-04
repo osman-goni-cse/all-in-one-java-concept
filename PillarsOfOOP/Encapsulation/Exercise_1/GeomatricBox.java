@@ -38,21 +38,21 @@ public class GeomatricBox {
         this.setHeight(height); 
     }
 
-    public void setLength(double length) {
+    private void setLength(double length) {
         if(length <= 0) {
             throw new IllegalArgumentException("Length can't be less than or equal to zero.");
         }
         this.length = length;
     }
 
-    public void setWidth(double width) {
+    private void setWidth(double width) {
         if(width <= 0) {
             throw new IllegalArgumentException("Width can't be less than or equal to zero");
         }
         this.width = width;
     }
 
-    public void setHeight(double height) {
+    private void setHeight(double height) {
         if(height <= 0) {
             throw new IllegalArgumentException("Height can't be less than or equal to zero");
         }
