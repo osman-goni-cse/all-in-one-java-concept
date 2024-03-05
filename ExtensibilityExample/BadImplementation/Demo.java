@@ -4,7 +4,10 @@ public class Demo {
     public static void main(String[] args) {
         System.out.println("Total Payable amount for DSi");
 
-        HrManager hrManager = new HrManager();
+        PaymentCalculator hourlyPaymentCalculator = new HourlyPaymentCalculator(75);
+        PaymentCalculator fixedPaymentCalculator = new FixedPaymentCalculator(509.0);
+
+        HrManager hrManager = new HrManager(fixedPaymentCalculator);
 
         Client client1 = new Client("Client_1", 15);
         Client client2 = new Client("Client_2", 91);
@@ -14,6 +17,6 @@ public class Demo {
         hrManager.addClient(client3);
         hrManager.addClient(client2);
 
-        System.out.println("DSi spent " + hrManager.getPayableAmount("FIXED") + " on employees");
+        System.out.println("DSi spent " + hrManager.getPayableAmount() + " on employees");
     }
 }

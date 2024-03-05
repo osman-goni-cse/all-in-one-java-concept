@@ -7,19 +7,19 @@ public class HrManager {
     private List<Client> clients;
     private PaymentCalculator paymentCalculator;
 
-    public HrManager() {
+    public HrManager(PaymentCalculator paymentCalculator) {
         this.clients = new ArrayList<>();
-        this.paymentCalculator = new PaymentCalculator();
+        this.paymentCalculator = paymentCalculator;
     }
 
     public void addClient(Client client) {
         clients.add(client);
     }
 
-    public double getPayableAmount(String paymentMethod) {
+    public double getPayableAmount() {
         double totalAmountToPay = 0.0;
         for(Client client: clients) {
-            totalAmountToPay += paymentCalculator.getPay(client, paymentMethod);
+            totalAmountToPay += paymentCalculator.getPay(client);
         }
         return totalAmountToPay;
     }
