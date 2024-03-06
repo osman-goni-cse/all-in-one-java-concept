@@ -2,6 +2,9 @@ package PillarsOfOOP.Abstraction;
 
 public class Product {
 
+    private static final double SHIPPING_RATE = 40;
+    private static final double DIMENSION_CHARGE = 3.0;
+
     private final String productName;
     private final int productWeight;
     private Dimension productDimension;
@@ -22,7 +25,15 @@ public class Product {
     }
 
     public double getProductPrice() {
-        return productPrice;
+        double calculatePrice = 0.0;
+        if(productDimension.getVolume() > 5) {
+            calculatePrice += productDimension.getVolume() * DIMENSION_CHARGE;
+        }
+        calculatePrice += productPrice ;
+        calculatePrice += this.getProductWeight() * SHIPPING_RATE;
+        calculatePrice -= (productPrice * (100 - productDiscount) / 100.0);
+
+        return calculatePrice;
     }
 
     @Override
