@@ -1,5 +1,5 @@
 package ExtensibilityExample.BadImplementation;
 
-public abstract class PaymentCalculator {
-    public abstract double getPay(Client client);
+public interface PaymentCalculator {
+    double getPay(Client client);
 }

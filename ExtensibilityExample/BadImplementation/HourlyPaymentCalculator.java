@@ -1,6 +1,6 @@
 package ExtensibilityExample.BadImplementation;
 
-public class HourlyPaymentCalculator extends PaymentCalculator {
+public class HourlyPaymentCalculator implements PaymentCalculator {
 
     private final double HOURLY_RATE ;
 

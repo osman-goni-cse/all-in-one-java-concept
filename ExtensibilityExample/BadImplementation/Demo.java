@@ -7,7 +7,7 @@ public class Demo {
         PaymentCalculator hourlyPaymentCalculator = new HourlyPaymentCalculator(75);
         PaymentCalculator fixedPaymentCalculator = new FixedPaymentCalculator(509.0);
 
-        HrManager hrManager = new HrManager(fixedPaymentCalculator);
+        HrManager hrManager = new HrManager(hourlyPaymentCalculator);
 
         Client client1 = new Client("Client_1", 15);
         Client client2 = new Client("Client_2", 91);

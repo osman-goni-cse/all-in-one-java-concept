@@ -1,6 +1,6 @@
 package ExtensibilityExample.BadImplementation;
 
-public class FixedPaymentCalculator extends PaymentCalculator{
+public class FixedPaymentCalculator implements PaymentCalculator{
     private double FIXED_RATE = 550.0;
 
     public FixedPaymentCalculator(double FIXED_RATE) {
