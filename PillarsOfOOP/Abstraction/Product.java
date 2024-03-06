@@ -6,7 +6,7 @@ public class Product {
     private static final double DIMENSION_CHARGE = 3.0;
 
     private final String productName;
-    private final int productWeight;
+    private int productWeight;
     private Dimension productDimension;
     private int productPrice;
     private int productDiscount;
@@ -18,6 +18,14 @@ public class Product {
         this.productWeight = productWeight;
         this.productDiscount = productDiscount;
         this.productDimension = productDimension;
+    }
+
+    public Product(String productName, int productPrice, int productDiscount) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productDiscount = productDiscount;
+        this.productWeight = 0;
+        this.productDimension = new Dimension(0, 0, 0);
     }
 
     public String getProductName() {
