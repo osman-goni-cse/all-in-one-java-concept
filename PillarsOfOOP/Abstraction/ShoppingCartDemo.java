@@ -10,10 +10,14 @@ public class ShoppingCartDemo {
         Product mouse = new Product("Mouse", 2, 50, 2, new Dimension(2, 1, 5));
         Product mobile = new Product("Apple A15", 1, 250, 5, new Dimension(1, 1, 5));
 
+        DigitalProduct digitalProduct = new DigitalProduct("eBook: Bela Furabar Age", 45, 0);
 
-        shoppingCart.addProduct(keyboard);
-        shoppingCart.addProduct(mobile);
-        shoppingCart.addProduct(mouse);
+        shoppingCart.addProduct(digitalProduct);
+
+
+        // shoppingCart.addProduct(keyboard);
+        // shoppingCart.addProduct(mobile);
+        // shoppingCart.addProduct(mouse);
 
         System.out.println("Total Payable amount is: " + shoppingCart.getTotalPrice());
 

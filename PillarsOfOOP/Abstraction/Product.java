@@ -31,7 +31,7 @@ public class Product {
         }
         calculatePrice += productPrice ;
         calculatePrice += this.getProductWeight() * SHIPPING_RATE;
-        calculatePrice -= (productPrice * (100 - productDiscount) / 100.0);
+        calculatePrice -= (productPrice * (productDiscount) / 100.0);
 
         return calculatePrice;
     }
