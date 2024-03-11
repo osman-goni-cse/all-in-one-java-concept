@@ -1,4 +1,4 @@
-package GenericsTutorial;
+package FileHandling.JavaNIO;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class ChannelFileWrite {
         FileChannel fileChannel = fos.getChannel()) {
             byte[] dataBytes = data.getBytes();
             ByteBuffer buffer = ByteBuffer.wrap(dataBytes);
-            fileChannel.write(buffer);
+            fileChannel.write(buffer); 
 
         } catch (IOException e) {
             System.out.println("Cannot write to the file");
